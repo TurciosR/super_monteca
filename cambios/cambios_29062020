@@ -1,0 +1,11 @@
+/*modificar tabla de caja*/
+ALTER TABLE `caja` ADD `ubicacion` INT NOT NULL AFTER `activa`;
+INSERT INTO `modulo` (`id_server`, `unique_id`, `id_modulo`, `id_menu`, `nombre`, `descripcion`, `filename`, `mostrarmenu`) VALUES ('0', '', NULL, '17', 'Reporte Ingresos y Egresos', 'Reporte Ingresos y Egresos', 'reporte_entrada_salida.php', '1')
+
+/*archivos*/
+editar_caja.php
+funciones_caja.js
+
+/*problems*/
+
+SELECT * FROM `stock` WHERE id_producto IN(SELECT stock.id_producto FROM `stock` GROUP BY id_producto HAVING COUNT(*)>1) ORDER BY `stock`.`id_producto`,id_stock ASC
